@@ -1,0 +1,98 @@
+/* الأساسيات */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9e2d8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* تنسيق جدول السودوكو */
+table {
+    border-collapse: collapse;
+    margin: auto;
+    background-color: #f1efea;
+    border: 2px solid #3C3D37;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid #3C3D37;
+}
+
+td input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: 1.2rem;
+    background: transparent;
+    outline: none;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    background-color: #f1efea;
+    color: #3C3D37;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #3C3D37;
+    color: #e9e2d8;
+    transform: scale(1.05);
+}
+
+/* تحسين التوافق مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+    table {
+        width: 90%;
+    }
+    td {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    button {
+        width: 100%;
+    }
+}

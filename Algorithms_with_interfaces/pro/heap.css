@@ -1,0 +1,133 @@
+/* الأساسيات */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9e2d8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* شريط التنقل */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #697565;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* إدخالات التحكم */
+.controls input {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px 15px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.controls input:focus {
+    border-color: #3C3D37;
+    box-shadow: 0 0 5px rgba(60, 61, 55, 0.5);
+}
+
+/* الأزرار */
+.button {
+    background-color: #f1efea;
+    color: #3C3D37;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #3C3D37;
+    color: #e9e2d8;
+    transform: scale(1.05);
+}
+
+/* الحاوية الرئيسية */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* عرض الكومة */
+.heap-display canvas{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.heap-display p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3C3D37;
+    margin-bottom: 10px;
+}
+
+/* اللوحات (Canvas) */
+canvas {
+    background-color: #fff;
+    border: 2px solid #3C3D37;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* تحسين التوافق مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .controls input {
+        width: 90%;
+    }
+
+    .button {
+        width: 90%;
+    }
+
+    .heap-display {
+        width: 95%;
+    }
+
+    canvas {
+        max-width: 95%;
+    }
+}

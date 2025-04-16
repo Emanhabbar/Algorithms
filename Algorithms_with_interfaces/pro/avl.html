@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شجرة AVL</title>
+    <link rel="stylesheet" href="avl.css">
+</head>
+<body>
+    <div class="container">
+     
+        <div class="controls">
+        <nav>
+            <div class="input">
+                <div class="input-p">
+
+                    <input class="input-rounded" type="number" id="valueInput" placeholder="أدخل قيمة">
+                    <button class="button" style="margin-left: 0;" onclick="insertNode()">إضافة</button>
+                </div>
+                <div class="input-p">
+              
+                    <input class="input-rounded" type="number" id="deleteInput" placeholder="أدخل قيمة">
+                    <button class="button" onclick="deleteNode()">حذف</button>
+                </div>
+                <div class="input-p">
+                    <input class="input-rounded" type="number" id="searchInput" placeholder="أدخل قيمة">
+                    <button class="button" onclick="searchNode()">بحث</button>
+                </div>
+            </div>
+        </nav>
+            <div>
+                <button class="button" onclick="displayInorder()">Inorder</button>
+                <button class="button" onclick="displayPostorder()">Postorder</button>
+                <button class="button" onclick="displayLevelorder()">Levelorder</button>
+            </div>
+           
+            <div id="result"></div>
+        </div>
+        <canvas id="treeCanvas" width="1000" height="400"></canvas>
+    </div>
+    <script src="./js/AVL.JS"></script>
+</body>
+</html>

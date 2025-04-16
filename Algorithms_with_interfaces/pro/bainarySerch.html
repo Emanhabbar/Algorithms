@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شجرة البحث الثنائية (BST)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bainarySearch.css">
+</head>
+<body>
+    <div class="container">
+   
+ 
+        <div class="controls">
+            <nav>
+                <div class="input">
+                    <div class="input-p">
+                        <input class="input-rounded" type="number" id="valueInput" placeholder="أدخل قيمة">
+                        <button class="button" onclick="insertNode()">إضافة</button>
+                    </div>
+                    <div>
+                        <input class="input-rounded" type="number" id="searchInput" placeholder="أدخل قيمة">
+                        <button class="button" onclick="searchNode()">بحث</button>
+                    </div>
+                    <div>
+                        <input class="input-rounded" type="number" id="deleteInput" placeholder="أدخل قيمة">
+                        <button class="button" onclick="deleteNode()">حذف</button>
+                    </div>
+                   </div>
+             </nav>
+          
+            <div class="traversals">
+                <button class="button" onclick="displayInorder()">ترتيب Inorder</button>
+                <button class="button" onclick="displayPostorder()">ترتيب Postorder</button>
+                <button class="button" onclick="displayLevelorder()">ترتيب Levelorder</button>
+            </div>
+        </div>
+
+        <div id="result"></div>
+
+        <canvas width="1000" height="600" id="treeCanvas"></canvas>
+    </div>
+
+    <script src="./js/BinaryTree.js"></script>
+</body>
+</html>

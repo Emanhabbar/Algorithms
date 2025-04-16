@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هيكل البيانات - صف الانتظار بالأولوية</title>
+    <link rel="stylesheet" href="priortQueue.css">
+</head>
+<body>
+    <div class="container">
+     
+
+        <div class="controls">
+            <nav>
+                <div class="input">
+                    <div class="input-p">
+                        <input class="input-rounded" type="number" id="value" placeholder="أدخل قيمة">
+                    </div>
+                    <div class="input-p">
+                        <input class="input-rounded" type="number" id="priority" placeholder="أدخل الأولوية">
+                    </div>
+                    <button class="button" onclick="handleEnqueue()">إضافة</button>
+            <button class="button" onclick="handleDequeue()">إزالة الأولوية الأعلى</button>
+            <button class="button" onclick="handleSearch()">بحث</button>
+                </div>
+            </nav>
+              
+        </div>
+
+        <p id="queueDisplay">Priority Queue:</p>
+        <canvas width="1000" height="500" id="queueCanvas"></canvas>
+    </div>
+
+    <script src="./js/PrioritQueue.js"></script>
+</body>
+</html>

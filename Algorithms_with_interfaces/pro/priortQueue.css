@@ -1,0 +1,150 @@
+/* الأساسيات */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9e2d8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* السماح بالتفاف العناصر إذا كانت الشاشة صغيرة */
+    background-color: #697565; /* لون خلفية خفيف */
+    padding: 15px;
+    /* border-radius: 10px; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+}
+nav .input {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* مسافة بين الإدخالات */
+    width: 100%; /* توزيع الإدخالات على العرض بالكامل */
+}
+/* الحاوية الرئيسية */
+.container {
+    width: 100%;
+    text-align: center;
+}
+
+/* عناصر التحكم */
+.controls {
+    margin-bottom: 20px;
+    
+}
+.input-p {
+    display: flex;
+    gap: 10px; /* مسافة بين الزر والإدخال */
+}
+.input-p input {
+    margin-right: 5px;
+}
+
+
+.controls div {
+    margin: 10px 0;
+}
+
+.controls label {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+.controls button:hover {
+    background-color: #3C3D37;
+}
+
+/* النتيجة */
+#result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #3C3D37;
+}
+
+/* الرسم */
+canvas {
+    margin-top: 20px;
+    background-color: #fff;
+    border: 2px solid #3C3D37;
+}
+
+.button {
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 40px;
+    width: 150px;
+    background-color: #f1efea;
+    color: #3C3D37;
+    font-weight: bold;
+   
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+.controls >div .button{
+     margin-left: 10px;
+}
+
+.button:hover {
+    background-color: #3C3D37;
+    color: #e9e2d8;
+    transform: scale(1.05);
+}
+.input-rounded {
+    border: 1px solid #ccc;
+    border-radius: 10px; /* يجعل الحواف دائرية */
+    padding: 10px 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-rounded:focus {
+    border-color: #e9e2d8; /* لون مميز عند التركيز */
+    box-shadow: 0 0 5px rgba(204, 216, 161, 0.5);
+}
+
+/* ✅ تحسين التوافق مع الشاشات المتوسطة والصغيرة */
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav .input {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .input-p {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* تحسين الإدخالات للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .input-rounded {
+        width: 90%; /* جعل الإدخال يأخذ عرض الشاشة تقريبًا */
+        text-align: center;
+    }
+
+    .button {
+        width: 90%;
+    }
+    .controls >div .button{
+        margin-bottom: 10px;
+    }
+    canvas {
+        max-width: 90%; /* تقليل الحجم على الشاشات الصغيرة */
+    }
+}

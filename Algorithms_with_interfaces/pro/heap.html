@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هياكل البيانات - الكومة (Heap)</title>
+    <link rel="stylesheet" href="heap.css">
+</head>
+<body>
+    <nav>
+        <div class="controls">
+            <input type="number" id="value" placeholder="أدخل رقم">
+            <button class="button" onclick="handleInsert()">إضافة</button>
+            <button class="button" onclick="handleExtract()">استخراج الجذر</button>
+            <button class="button" onclick="handleSearch()">بحث</button>
+        </div>
+    </nav>
+    <div class="container">
+        
+
+      
+
+        <div class="heap-display">
+            <p id="maxHeap">Max Heap:</p>
+            <canvas  width="800" height="400"  id="maxCanvas"></canvas>
+        </div>
+
+        <div class="heap-display">
+            <p id="minHeap">Min Heap:</p>
+            <canvas width="1000" height="400" id="minCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="./js/Heap.js"></script>
+</body>
+</html>

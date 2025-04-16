@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شجرة Trie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tri.css">
+</head>
+<body>
+    <div class="container">
+
+
+        <div class="controls">
+
+            <div class="">
+                <input type="text" id="wordInput" placeholder="أدخل كلمة">
+                <button class="button" onclick="insertWord()">إضافة كلمة</button>
+            </div>
+            <div>
+                <input type="text" id="prefixInput" placeholder="أدخل بادئة">
+                <button class="button" onclick="searchWithPrefix()">بحث</button>
+            </div>
+         
+        </div>
+
+        <div id="result"></div>
+
+        <canvas width="1200" height="600" id="trieCanvas"></canvas>
+    </div>
+
+    <script src="./js/Trie.js"></script>
+</body>
+</html>

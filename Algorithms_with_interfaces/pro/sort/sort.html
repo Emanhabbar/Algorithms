@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ترتيب المصفوفة</title>
+    <link rel="stylesheet" href="sort.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ترتيب المصفوفة باستخدام الخوارزميات</h1>
+
+        <div class="input-section">
+            <label for="arrayInput">أدخل القيم (فصل بين القيم باستخدام الفواصل):</label>
+            <input type="text" id="arrayInput" placeholder="مثال: 5, 2, 8, 1">
+            <button id="generateArrayBtn">إنشاء الأعمدة</button>
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li><a href="#" id="bubbleSortBtn"> bubble Sort</a></li>
+                <li><a href="#" id="selectionSortBtn">selection Sort</a></li>
+                <li><a href="#" id="insertionSortBtn"> insertion Sort</a></li>
+                <li><a href="#" id="mergeSortBtn">merge Sort </a></li>
+            </ul>
+        </div>
+
+        <div class="array-container" id="arrayContainer"></div>
+
+        <div class="button-section">
+            <button id="startBtn">ابدأ الترتيب</button>
+        </div>
+    </div>
+
+    <script src="sort.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* تعيين خلفية بنفسجية للصفحة */
+body {
+  background-color: #e9e2d8; 
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* تصميم الناف بار */
+.navbar {
+  background-color: #697565; 
+  padding: 15px;
+}
+h1{
+color: #3C3D37;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #e9e2d8;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+  background-color: #3C3D37; 
+}
+
+/* تصميم المحتوى الرئيسي */
+main {
+  padding: 30px;
+  text-align: center;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown button {
+  background-color: #3C3D37;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #3C3D37;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: rgb(255, 255, 255);
+
+}
+
+.dropdown-content a:hover {
+  background-color: #3C3D37;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #697565;
+      padding: 10px 0;
+      text-align: center;
+  }
+
+  .navbar ul li {
+      margin: 10px 0;
+  }
+
+  /* عرض القائمة عند النقر على زر التبديل */
+  .navbar.active ul {
+      display: flex;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+}
+@media (max-width: 1250px) {
+.navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+}
+
+ 
